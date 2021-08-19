@@ -6,11 +6,11 @@ variable "project" {
 
 variable "workload" {
   type        = string
-  description = "A 'shortened' name of the Project. limited to 5 characters. Such as 'shs' or 'srperf'"
+  description = "A 'shortened' name of the Project. limited to 6 characters. Such as 'shs' or 'srperf'"
   default     = "wtest"
   validation {
     condition = (length(var.workload) <=5)
-    error_message = "Workload input variable must be less than 5 characters."
+    error_message = "Workload input variable must be less than 6 characters."
   }
 }
 
